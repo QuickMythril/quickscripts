@@ -156,7 +156,7 @@ update_status() {
       height_display="XXXXXXX"
       # Display with appropriate placeholders
       printf "\033[%d;0H%b: Minting:%b Syncing:%b Peers:%s Height:%s\n" \
-        $((i + 1)) "${names[$i]}" "$isMintingPossible" "$isSynchronizing" "$peers_display" "$height_display"
+        $((i + 1)) "${names[$i]}" "$isMintingPossible" "$isSynchronizing" "$peers_display"/"$peers_display" "$height_display"
     else
       if $use_jq; then
         # Extract relevant data using jq for JSON parsing
